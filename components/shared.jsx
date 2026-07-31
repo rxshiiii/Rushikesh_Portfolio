@@ -156,6 +156,7 @@ export function ProjCard({ p, big = false }) {
         transform: hov ? "translateY(-5px) scale(1.01)" : "none",
         boxShadow: hov ? `0 18px 56px ${rgba}.12)` : "none",
         gridColumn: big ? "span 2" : "span 1",
+        display: "flex", flexDirection: "column", height: "100%",
       }}
     >
       {hov && <div style={{ position: "absolute", left: 0, right: 0, height: 2, background: `linear-gradient(90deg,transparent,${p.color},transparent)`, opacity: .55, animation: "scan 2s linear infinite" }} />}
@@ -175,7 +176,7 @@ export function ProjCard({ p, big = false }) {
         {p.feats.map(f => <span key={f} className={`tag ${p.tc}`} style={{ fontSize: 8 }}>{f}</span>)}
       </div>
 
-      <div style={{ paddingTop: 12, borderTop: "1px solid var(--border)", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
+      <div style={{ marginTop: "auto", paddingTop: 12, borderTop: "1px solid var(--border)", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
           {p.stack.map((s, i) => (
             <span key={s} className="mono" style={{ fontSize: 9, color: "var(--muted)" }}>

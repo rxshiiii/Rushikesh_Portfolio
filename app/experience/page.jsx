@@ -3,6 +3,20 @@ import { Reveal, Ticker, NeuralLines } from "../../components/shared";
 
 const EXP = [
   {
+    role: "Research Intern",
+    org: "Pimpri Chinchwad College of Engineering, Pune",
+    period: "May 2026 – Aug 2026",
+    type: "RESEARCH",
+    color: "var(--gold)", tc: "tag-g",
+    desc: "Researched Quantum Computing and AI for simulating ancient Indian astronomical models; developed Python-based scientific-computing simulations of astronomical formulas.",
+    stack: ["Python", "Qiskit", "Quantum ML", "Scientific Computing", "AI Research"],
+    achievements: [
+      "Developed Python-based scientific-computing simulations of ancient astronomical formulas",
+      "Benchmarked classical vs. quantum approaches using Qiskit and Quantum ML frameworks",
+      "Evaluated computational efficiency and scalability across quantum and classical methods",
+    ],
+  },
+  {
     role: "Full Stack Developer Intern",
     org: "Incrust Software",
     period: "2024",

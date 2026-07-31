@@ -56,6 +56,22 @@ const ML_PROJECTS = [
     stack: ["Python", "TensorFlow", "Keras", "Scikit-learn", "NumPy", "Pandas"],
     links: ML_PROJECT_LINKS.breastCancerANN,
   },
+  {
+    id: "M03", title: "Student Math Score Predictor", sub: "End-to-End ML System on AWS",
+    color: "var(--cyan)", tc: "tag-c",
+    desc: "Engineered a modular regression pipeline (data ingestion → feature engineering → automated model selection across 7+ regressors incl. XGBoost, CatBoost) with cross-validated evaluation, experiment tracking, and model versioning. Deployed a Dockerized Flask service with CI/CD via GitHub Actions to AWS ECR/EC2 — a scalable, fault-tolerant, production-ready prediction endpoint.",
+    feats: ["Modular Pipeline", "Automated Model Selection", "CI/CD to AWS", "Experiment Tracking", "Model Versioning"],
+    stack: ["Python", "Flask", "Docker", "AWS ECR/EC2", "XGBoost", "CatBoost", "GitHub Actions"],
+    links: ML_PROJECT_LINKS.mathScorePredictor,
+  },
+  {
+    id: "M04", title: "Quantum AI Simulation of Brahmasphutasiddhanta Planetary Algorithms", sub: "Hybrid Classical-Quantum Simulation",
+    color: "var(--gold)", tc: "tag-g",
+    desc: "Developed a hybrid classical-quantum simulation of Brahmagupta's planetary computation pipeline using Python, Qiskit, NumPy, SciPy, and Astropy. Implemented Ahargana, Mean Longitude, Manda, and Sighra corrections, integrated QFT and VQC models, and validated planetary predictions against modern astronomical ephemeris data.",
+    feats: ["Ahargana Computation", "Manda & Sighra Corrections", "QFT Integration", "VQC Models", "Ephemeris Validation"],
+    stack: ["Python", "Qiskit", "NumPy", "SciPy", "Astropy", "Quantum Computing"],
+    links: ML_PROJECT_LINKS.quantumPlanetarySim,
+  },
 ];
 
 const WEB_PROJECTS = [
@@ -173,11 +189,9 @@ export default function ProjectsPage() {
           </div>
 
           {/* ── PROJECT GRID ── */}
-          <div className="bento" style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: 16 }}>
+          <div className="bento" style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gridAutoRows: "1fr", gap: 16, alignItems: "stretch" }}>
             {projects.map((p, i) => (
-              <div key={p.id} style={{ gridColumn: i === 0 && projects.length > 2 ? "span 2" : "span 1" }}>
-                <ProjCard p={p} big={i === 0 && projects.length > 2} />
-              </div>
+              <ProjCard key={p.id} p={p} big={i === 0 && projects.length > 2} />
             ))}
           </div>
         </Reveal>

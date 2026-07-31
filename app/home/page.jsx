@@ -59,7 +59,7 @@ export default function HomePage() {
           <div className="spline-col" style={{ position: "relative", overflow: "hidden" }}>
             <SplineErrorBoundary>
               <SplineComponent
-                scene="https://my.spline.design/3drobotheadtrackingmousecopy-9a00d2fb8eaef9ba2f1c1f7ffc7f3a17/"
+                scene="https://prod.spline.design/QZ3SIjVtdoEgkUWa/scene.splinecode"
               />
             </SplineErrorBoundary>
             <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, var(--bg) 0%, transparent 18%, transparent 80%, var(--bg) 100%)", pointerEvents: "none", zIndex: 1 }} />
